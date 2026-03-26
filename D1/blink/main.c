@@ -5,6 +5,8 @@
 #define GPIO0_CTRL      0x004U
 #define SIO_BASE        0xD0000000U
 #define GPIO_OUT        0xD0000010U
+#define GPIO_OUT_XOR    0xD000001CU //TODO: Toggle LED using this register
+
 #define GPIO_OE         0xD0000020U
 #define RESETS_BASE     0x4000C000U
 #define RESETS_DONE_OFFSET     0x8U

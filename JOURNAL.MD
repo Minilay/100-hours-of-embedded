@@ -19,8 +19,7 @@ on Day 3. I studied Chapter 6 Structs at K&R.
 - Performed bit manipulations a lot (like it)
 - Made an LED Blink without using pico sdk (almost). The code is written without sdk but built with it. I hope I will be able to build programs without any SDKs in future.
 
-
-Result: Ohh I touched registers today, it felt illegal how you can. Change local variables without API passes or any functions called, just change variables and hardware physically changes its state. 
+Result: Ohh I touched registers today, it felt illegal how you can. Change local variables without API passes or any functions called, just change variables and hardware physically changes its state.
 
 Registeres that will never be clean after I touched them today:
 
@@ -30,3 +29,10 @@ Registeres that will never be clean after I touched them today:
 - GPIO_OUT. This register sets gpio to high or low (if output mode was selected)
 
 The most confusing part for me is CMakeLists.txt I don't know yet how my main.c is converted to a binary that RP2040 understands.
+
+
+# Day 2
+
+This is also taking my more than 1 day. 
+
+I understood how SIO works (in general). What are interrupts, low-key understood the Bus-fabric. Understood Aliases and how GPIOs work.
