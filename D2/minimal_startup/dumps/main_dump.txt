@@ -1,0 +1,101 @@
+
+main.o:     file format elf32-littlearm
+
+
+Disassembly of section .text.startup:
+
+00000000 <main>:
+   0:	4a1c      	ldr	r2, [pc, #112]	@ (74 <main+0x74>)
+   2:	b530      	push	{r4, r5, lr}
+   4:	6813      	ldr	r3, [r2, #0]
+   6:	491c      	ldr	r1, [pc, #112]	@ (78 <main+0x78>)
+   8:	b083      	sub	sp, #12
+   a:	400b      	ands	r3, r1
+   c:	6013      	str	r3, [r2, #0]
+   e:	2290      	movs	r2, #144	@ 0x90
+  10:	491a      	ldr	r1, [pc, #104]	@ (7c <main+0x7c>)
+  12:	0052      	lsls	r2, r2, #1
+  14:	680b      	ldr	r3, [r1, #0]
+  16:	4013      	ands	r3, r2
+  18:	4293      	cmp	r3, r2
+  1a:	d1fb      	bne.n	14 <main+0x14>
+  1c:	2205      	movs	r2, #5
+  1e:	2480      	movs	r4, #128	@ 0x80
+  20:	2000      	movs	r0, #0
+  22:	4b17      	ldr	r3, [pc, #92]	@ (80 <main+0x80>)
+  24:	00a4      	lsls	r4, r4, #2
+  26:	601a      	str	r2, [r3, #0]
+  28:	4a16      	ldr	r2, [pc, #88]	@ (84 <main+0x84>)
+  2a:	4917      	ldr	r1, [pc, #92]	@ (88 <main+0x88>)
+  2c:	6813      	ldr	r3, [r2, #0]
+  2e:	4d17      	ldr	r5, [pc, #92]	@ (8c <main+0x8c>)
+  30:	4323      	orrs	r3, r4
+  32:	6013      	str	r3, [r2, #0]
+  34:	680b      	ldr	r3, [r1, #0]
+  36:	4a16      	ldr	r2, [pc, #88]	@ (90 <main+0x90>)
+  38:	4323      	orrs	r3, r4
+  3a:	600b      	str	r3, [r1, #0]
+  3c:	680b      	ldr	r3, [r1, #0]
+  3e:	4323      	orrs	r3, r4
+  40:	600b      	str	r3, [r1, #0]
+  42:	9000      	str	r0, [sp, #0]
+  44:	9b00      	ldr	r3, [sp, #0]
+  46:	4293      	cmp	r3, r2
+  48:	dc05      	bgt.n	56 <main+0x56>
+  4a:	9b00      	ldr	r3, [sp, #0]
+  4c:	3301      	adds	r3, #1
+  4e:	9300      	str	r3, [sp, #0]
+  50:	9b00      	ldr	r3, [sp, #0]
+  52:	4293      	cmp	r3, r2
+  54:	ddf9      	ble.n	4a <main+0x4a>
+  56:	680b      	ldr	r3, [r1, #0]
+  58:	402b      	ands	r3, r5
+  5a:	600b      	str	r3, [r1, #0]
+  5c:	9001      	str	r0, [sp, #4]
+  5e:	9b01      	ldr	r3, [sp, #4]
+  60:	4293      	cmp	r3, r2
+  62:	dceb      	bgt.n	3c <main+0x3c>
+  64:	9b01      	ldr	r3, [sp, #4]
+  66:	3301      	adds	r3, #1
+  68:	9301      	str	r3, [sp, #4]
+  6a:	9b01      	ldr	r3, [sp, #4]
+  6c:	4293      	cmp	r3, r2
+  6e:	ddf9      	ble.n	64 <main+0x64>
+  70:	e7e4      	b.n	3c <main+0x3c>
+  72:	46c0      	nop			@ (mov r8, r8)
+  74:	4000c000 			@ <UNDEFINED> instruction: 4000c000
+  78:	fffffedf 			@ <UNDEFINED> instruction: fffffedf
+  7c:	4000c008 			@ <UNDEFINED> instruction: 4000c008
+  80:	4001404c 			@ <UNDEFINED> instruction: 4001404c
+  84:	d0000020 			@ <UNDEFINED> instruction: d0000020
+  88:	d0000010 			@ <UNDEFINED> instruction: d0000010
+  8c:	fffffdff 			@ <UNDEFINED> instruction: fffffdff
+  90:	0007a11f 			@ <UNDEFINED> instruction: 0007a11f
+
+Disassembly of section .comment:
+
+00000000 <.comment>:
+   0:	43434700 			@ <UNDEFINED> instruction: 43434700
+   4:	4628203a 			@ <UNDEFINED> instruction: 4628203a
+   8:	726f6465 			@ <UNDEFINED> instruction: 726f6465
+   c:	35312061 			@ <UNDEFINED> instruction: 35312061
+  10:	302e322e 			@ <UNDEFINED> instruction: 302e322e
+  14:	662e312d 			@ <UNDEFINED> instruction: 662e312d
+  18:	29333463 			@ <UNDEFINED> instruction: 29333463
+  1c:	2e353120 			@ <UNDEFINED> instruction: 2e353120
+  20:	00302e32 			@ <UNDEFINED> instruction: 00302e32
+
+Disassembly of section .ARM.attributes:
+
+00000000 <.ARM.attributes>:
+   0:	00002b41 			@ <UNDEFINED> instruction: 00002b41
+   4:	61656100 			@ <UNDEFINED> instruction: 61656100
+   8:	01006962 			@ <UNDEFINED> instruction: 01006962
+   c:	00000021 			@ <UNDEFINED> instruction: 00000021
+  10:	2d533605 			@ <UNDEFINED> instruction: 2d533605
+  14:	0c06004d 			@ <UNDEFINED> instruction: 0c06004d
+  18:	01094d07 			@ <UNDEFINED> instruction: 01094d07
+  1c:	01140412 			@ <UNDEFINED> instruction: 01140412
+  20:	03170115 			@ <UNDEFINED> instruction: 03170115
+  24:	01190118 			@ <UNDEFINED> instruction: 01190118
+  28:	021e011a 			@ <UNDEFINED> instruction: 021e011a

@@ -1,0 +1,62 @@
+
+startup.o:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <default_handler>:
+   0:	e7fe      	b.n	0 <default_handler>
+   2:	46c0      	nop			@ (mov r8, r8)
+
+00000004 <reset_handler>:
+   4:	4b08      	ldr	r3, [pc, #32]	@ (28 <reset_handler+0x24>)
+   6:	4a09      	ldr	r2, [pc, #36]	@ (2c <reset_handler+0x28>)
+   8:	b510      	push	{r4, lr}
+   a:	4293      	cmp	r3, r2
+   c:	d209      	bcs.n	22 <reset_handler+0x1e>
+   e:	2100      	movs	r1, #0
+  10:	3a01      	subs	r2, #1
+  12:	1ad2      	subs	r2, r2, r3
+  14:	0892      	lsrs	r2, r2, #2
+  16:	3201      	adds	r2, #1
+  18:	0092      	lsls	r2, r2, #2
+  1a:	18d2      	adds	r2, r2, r3
+  1c:	c302      	stmia	r3!, {r1}
+  1e:	4293      	cmp	r3, r2
+  20:	d1fc      	bne.n	1c <reset_handler+0x18>
+  22:	f7ff fffe 	bl	0 <main>
+  26:	bd10      	pop	{r4, pc}
+	...
+
+Disassembly of section .vectors:
+
+00000000 <vector_table>:
+	...
+
+Disassembly of section .comment:
+
+00000000 <.comment>:
+   0:	43434700 			@ <UNDEFINED> instruction: 43434700
+   4:	4628203a 			@ <UNDEFINED> instruction: 4628203a
+   8:	726f6465 			@ <UNDEFINED> instruction: 726f6465
+   c:	35312061 			@ <UNDEFINED> instruction: 35312061
+  10:	302e322e 			@ <UNDEFINED> instruction: 302e322e
+  14:	662e312d 			@ <UNDEFINED> instruction: 662e312d
+  18:	29333463 			@ <UNDEFINED> instruction: 29333463
+  1c:	2e353120 			@ <UNDEFINED> instruction: 2e353120
+  20:	00302e32 			@ <UNDEFINED> instruction: 00302e32
+
+Disassembly of section .ARM.attributes:
+
+00000000 <.ARM.attributes>:
+   0:	00002b41 			@ <UNDEFINED> instruction: 00002b41
+   4:	61656100 			@ <UNDEFINED> instruction: 61656100
+   8:	01006962 			@ <UNDEFINED> instruction: 01006962
+   c:	00000021 			@ <UNDEFINED> instruction: 00000021
+  10:	2d533605 			@ <UNDEFINED> instruction: 2d533605
+  14:	0c06004d 			@ <UNDEFINED> instruction: 0c06004d
+  18:	01094d07 			@ <UNDEFINED> instruction: 01094d07
+  1c:	01140412 			@ <UNDEFINED> instruction: 01140412
+  20:	03170115 			@ <UNDEFINED> instruction: 03170115
+  24:	01190118 			@ <UNDEFINED> instruction: 01190118
+  28:	021e011a 			@ <UNDEFINED> instruction: 021e011a
